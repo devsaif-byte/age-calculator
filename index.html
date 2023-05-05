@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+		<!-- pico css cdn -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+		/>
+		<!-- custom css -->
+		<link rel="stylesheet" href="./styles/main.css" />
+		<script defer src="./script.js"></script>
+		<title>Frontend Mentor | Age calculator app</title>
+	</head>
+	<body>
+		<main class="container">
+			<article class="card">
+				<div>
+					<form class="grid">
+						<label for="day"
+							>Day
+
+							<input
+								type="number"
+								id="day"
+								name="day"
+								placeholder="DD"
+								required
+							/>
+							<small></small>
+						</label>
+						<label for="month"
+							>Month
+
+							<input
+								type="number"
+								id="month"
+								name="month"
+								placeholder="MM"
+								required
+							/>
+							<small></small>
+						</label>
+						<label for="year"
+							>Year
+
+							<input
+								type="number"
+								id="year"
+								name="year"
+								placeholder="YYYY"
+								required
+							/>
+							<small></small>
+						</label>
+					</form>
+				</div>
+				<div class="submit-block">
+					<hr />
+					<div id="btn__submit" onclick="() => handleSubmit">
+						<img src="./assets/images/icon-arrow.svg" alt="Icon arrow image" />
+					</div>
+				</div>
+
+				<ul class="dates">
+					<li>
+						<h1 class="list__item" id="years">--</h1>
+						<h1 class="list__item">Years</h1>
+					</li>
+					<li>
+						<h1 class="list__item" id="months">--</h1>
+						<h1 class="list__item">Months</h1>
+					</li>
+					<li>
+						<h1 class="list__item" id="days">--</h1>
+						<h1 class="list__item">Days</h1>
+					</li>
+				</ul>
+			</article>
+			<!-- <footer class="attribution"> -->
+			<blockquote>
+				Challenge by
+				<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+					Frontend Mentor</a
+				>. Coded by <a href="#"> Mohammad Saifuddin</a>.
+			</blockquote>
+			<!-- </footer> -->
+		</main>
+	</body>
+</html>

@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	/* # Colors */
+	/* ## Primary */
+	--color-purple: hsl(259, 100%, 65%);
+	--color-lightRed: hsl(0, 100%, 67%);
+	/* ### Neutral */
+	--white: hsl(0, 0%, 100%);
+	--off-white: hsl(0, 0%, 94%);
+	--light-grey: hsl(0, 0%, 86%);
+	--smokey-grey: hsl(0, 1%, 44%);
+	--off-black: hsl(0, 0%, 8%);
+	--font-family: ;
+}
+hr {
+	width: 100%;
+	margin: 0 3rem;
+}
+small {
+	color: var(--color-lightRed);
+	/* background-color: antiquewhite; */
+	height: 0.5rem;
+	display: inline-block;
+}
+h1 {
+	font-style: italic;
+
+	font-weight: 700;
+	font-size: 3rem;
+	letter-spacing: 0.3rem;
+}
+
+body {
+	/* font-size: 32px; */
+	font-family: "Poppins", sans-serif;
+	height: 100vh;
+	position: relative;
+}
+.container {
+	height: 100%;
+	background-color: var(--white);
+	padding: 2rem;
+}
+
+.dates li {
+	list-style: none;
+	display: flex;
+	gap: 1rem;
+	padding: 0;
+	margin: 0;
+}
+
+.card {
+	border-radius: 0 0 35% 0;
+	display: block;
+	width: 40rem;
+	height: 40rem;
+	margin: auto;
+}
+
+.submit-block {
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+#btn__submit {
+	position: absolute;
+	right: 0;
+	height: 5rem;
+	width: 5rem;
+	background-color: var(--color-purple);
+	color: var(--white);
+	border-radius: 50%;
+	text-align: center;
+	padding: 1rem;
+}
+#btn__submit img {
+	height: 100%;
+	width: 100%;
+	display: inline-block;
+	top: 50%;
+	left: 50%;
+	padding: 0.5rem;
+	/* transform: translate(0%, 0%); */
+}
+li > .list__item:first-child {
+	color: var(--color-purple);
+}
+blockquote {
+	width: 75%;
+	margin: 1rem auto;
+}
