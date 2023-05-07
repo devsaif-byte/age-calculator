@@ -22,14 +22,17 @@ let currYear = date.getFullYear();
 // input validation
 const inputValidator = function () {
 	let validator = true;
-	if (dobInput.value > 31) {
+	if (!dobInput.value && dobInput.value > 31) {
 		dobInput.nextElementSibling.innerHTML = "Must a valid date.";
+		dobInput.style.borderColor = "red";
 		validator = false;
 	} else if (domInput.value > 12) {
 		domInput.nextElementSibling.innerHTML = "Must be a valid month.";
+		domInput.style.borderColor = "red";
 		validator = false;
 	} else if (doyInput.value > currYear) {
 		doyInput.nextElementSibling.innerHTML = "Must be in the past.";
+		doyInput.style.borderColor = "red";
 		validator = false;
 	}
 
@@ -53,7 +56,10 @@ const calcAge = (birthDay, birthMonth, birthYear) => {
 	if (birthMonth > currMonth) {
 		currYear -= 1;
 		currMonth += 12;
+	} else {
+		return;
 	}
+
 	const resDate = today - birthDay;
 	const resMonth = currMonth - birthMonth;
 	const resYear = currYear - birthYear;
@@ -61,6 +67,10 @@ const calcAge = (birthDay, birthMonth, birthYear) => {
 	const day = (dayOutput.innerHTML = resDate);
 	const month = (monthOutput.innerHTML = resMonth);
 	const year = (yearOutput.innerHTML = resYear);
+	dobInput.value = "";
+	domInput.value = "";
+	doyInput.value = "";
+
 	// prettier-ignore
 	return (day, month, year);
 };

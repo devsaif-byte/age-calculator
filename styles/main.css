@@ -18,16 +18,17 @@
 	--off-black: hsl(0, 0%, 8%);
 	--font-family: ;
 }
+
 hr {
 	width: 100%;
-	margin: 0 3rem;
 }
+
 small {
 	color: var(--color-lightRed);
-	/* background-color: antiquewhite; */
-	height: 0.5rem;
-	display: inline-block;
+	height: 1.5rem;
+	margin: 0;
 }
+
 h1 {
 	font-style: italic;
 
@@ -97,4 +98,41 @@ li > .list__item:first-child {
 blockquote {
 	width: 75%;
 	margin: 1rem auto;
+}
+
+/* Mobile */
+@media only screen and (max-width: 1000px) {
+	.list__item {
+		font-size: 1.5rem;
+		margin: 1rem 0;
+	}
+	.card {
+		width: 100%;
+	}
+	label {
+		height: 5rem;
+	}
+	#btn__submit {
+		height: 3rem;
+		width: 3rem;
+		right: 40%;
+		left: 40%;
+	}
+
+	#btn__submit img {
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: inline-block;
+		padding: 0;
+	}
+	.dates li {
+		align-items: center;
+		justify-content: center;
+	}
+	blockquote {
+		margin: 0;
+		font-size: small;
+	}
 }
